@@ -1,0 +1,20 @@
+{
+  "text_box": {
+    "card_name": "Elements",
+    "sub_card_name": "Text Box",
+    "user": {
+        "name": "Alpha",
+        "email": "alpha@gmail.com",
+        "currentAddress": "Bangalore",
+        "permanentAddress": "Chennai"
+      },
+    "invalid_email" : "a@gmail"
+  },
+
+  "radio_btn": {
+    "card_name": "Elements",
+    "sub_card_name": "Radio Button",
+    "radio_btn_name": "No"
+  }
+
+}
