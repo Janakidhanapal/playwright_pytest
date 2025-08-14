@@ -1,0 +1,22 @@
+report:
+  title: "My pytest first report"
+  img_url: "https://your-logo-url.png"
+  report_dir: "reports"
+  test_environment: "Development"
+
+functional_specs:
+  SPEC-001: "Home screen"
+  SPEC-002: "Data Processing"
+  SPEC-003: "API Integration"
+
+categories:
+  unit: "Unit Tests"
+  integration: "Integration Tests"
+  regression: "Regression Tests"
+
+theme:
+  primary_color: "#0052CC"
+  success_bg: "#E3FCEF"
+  error_bg: "#FFEBE6"
+  warning_bg: "#FFFAE6"
+  info_bg: "#DEEBFF"
