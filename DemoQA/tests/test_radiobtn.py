@@ -16,17 +16,16 @@ def load_json_data() -> dict:
 
 
 # In this case, we get the data from the fixture in conftest.py
-def test_homepage(page: Page, logger, demo_details):
+def test_homepage(page: Page, demo_details):
     expect(page).to_have_title("DEMOQA")
     expect(page).to_have_url('https://demoqa.com/')
     Home.verify_card_visible(page, demo_details['radio_btn']['card_name'])
-    logger.step("Home page is validated successfully")
     TearDown.close_browser(page)
 
 
 def test_elements_page(page: Page):
     data = load_json_data()
-    Home.click_card(page, data['card_name'])
+    Home.click_card(page, data['radio_btn']['card_name'])
     General.verify_elements_page_loaded(page)
     General.take_screenshot(page)
     page.wait_for_timeout(1000)

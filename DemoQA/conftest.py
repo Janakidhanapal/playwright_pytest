@@ -1,5 +1,5 @@
 # File name has to be conftest.py
-
+import allure
 import pytest
 from playwright.sync_api import Page
 
@@ -16,6 +16,19 @@ def browser_type_launch_args():
 @pytest.fixture(autouse=True)
 def setup(page: Page):
     page.goto('https://demoqa.com/')
+
+@pytest.hookimpl(tryfirst=True, hookwrapper=True)
+def pytest_runtest_makereport(item, call):
+    # Execute all other hooks to obtain the report object
+    outcome = yield
+    report = outcome.get_result()
+
+    # Only take screenshot on test failure
+    if report.when == "call" and report.failed:
+        page = item.funcargs.get("page", None)
+        if page: screenshot = page.screenshot()
+        allure.attach(screenshot, name="failure_screenshot", attachment_type=allure.attachment_type.PNG)
+
 
 #we have two ways to get user data
 #1st way is to get data from the json file
