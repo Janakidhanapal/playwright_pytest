@@ -15,6 +15,17 @@
     "card_name": "Elements",
     "sub_card_name": "Radio Button",
     "radio_btn_name": "Yes"
+  },
+
+  "check_box": {
+    "card_name": "Elements",
+    "sub_card_name": "Check Box",
+    "checkbox_name": "Angular",
+    "checkbox_tree_node": [
+      ["Home-Documents-WorkSpace-React",
+      "Home-Desktop-Notes"],
+      "Home-Downloads-Excel File.doc"
+    ]
   }
 
 }
