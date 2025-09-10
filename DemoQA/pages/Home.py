@@ -1,4 +1,4 @@
-from playwright.sync_api import Page, expect
+from playwright.sync_api import Page
 
 
 def verify_card_visible(page: Page, card_name: str):
