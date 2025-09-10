@@ -38,8 +38,13 @@ def pytest_runtest_makereport(item, call):
 #1st way is to get data from the json file
 def load_test_data():
     project_root = Path(__file__).resolve().parent
-    data_file = open(os.path.join(project_root, 'test_data.json'))
+    data_file = open(os.path.join(project_root, 'test_data', 'test_data.json'))
     return json.load(data_file)
+
+
+@pytest.fixture()
+def test_data():
+    return load_test_data()
 
 
 #another way is to get from the fixture like the below

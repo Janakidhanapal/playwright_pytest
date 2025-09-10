@@ -26,6 +26,19 @@
       "Home-Desktop-Notes"],
       "Home-Downloads-Excel File.doc"
     ]
+  },
+
+  "web_tables": {
+    "card_name": "Elements",
+    "sub_card_name": "Web Tables",
+    "user": {
+      "firstname": "Anu",
+      "lastname": "Rahul",
+      "age": "23",
+      "email": "anu@gmail.com",
+      "salary": "5000",
+      "department": "CSE"
+    }
   }
 
 }
