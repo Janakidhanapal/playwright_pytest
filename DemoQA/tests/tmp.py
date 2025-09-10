@@ -1,10 +1,8 @@
-import json
-import os
-from pathlib import Path
+from DemoQA.conftest import load_test_data
+#
+data = load_test_data()
+user_details: dict = data['web_tables']['user']
+print(user_details.values())
 
-
-project_root = Path(__file__).resolve().parent.parent
-data_file = open(os.path.join(project_root, 'test_data.json'))
-data = json.load(data_file)
-print(data)
-print(data['users']['name'])
+a = ['alpha', 'beta', 'gamma']
+print(a.index('beta'))
